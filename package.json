@@ -1,0 +1,61 @@
+{
+	"name": "bamba-soap",
+	"version": "1.0.0",
+	"description": "Libreria soap modificada para el proyecto de bamba. no se debe de utilizar en ningun otro proyecto",
+	"main": "index.js",
+	"scripts": {
+		"cover": "nyc --reporter=lcov --reporter=html --reporter=text mocha --exit test/*-test.js test/security/*.js",
+		"coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js -v",
+		"pretest": "jshint index.js lib test",
+		"test": "mocha --timeout 10000 --exit test/*-test.js test/security/*.js",
+		"toc": "doctoc Readme.md --github --maxlevel 3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GussWare/bamba-soap.git"
+	},
+	"keywords": [
+		"soap",
+		"bamba"
+	],
+	"author": "gussware",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/GussWare/bamba-soap/issues"
+	},
+	"homepage": "https://github.com/GussWare/bamba-soap#readme",
+	"dependencies": {
+		"bluebird": "^3.5.0",
+		"concat-stream": "^1.5.1",
+		"debug": "^2.6.9",
+		"ejs": "~2.5.5",
+		"finalhandler": "^1.0.3",
+		"httpntlm": "^1.5.2",
+		"lodash": "^4.17.5",
+		"request": ">=2.9.0",
+		"sax": ">=0.6",
+		"serve-static": "^1.11.1",
+		"strip-bom": "~0.3.1",
+		"uuid": "^3.1.0",
+		"xml-crypto": "~0.8.0"
+	},
+	"devDependencies": {
+		"@types/bluebird": "^3.5.1",
+		"body-parser": "^1.15.2",
+		"colors": "^1.1.2",
+		"coveralls": "^3.0.1",
+		"diff": "^2.2.1",
+		"doctoc": "^1.0.0",
+		"duplexer": "~0.1.1",
+		"express": "^4.14.0",
+		"glob": "~3.2.8",
+		"jshint": "2.3.0",
+		"mocha": "~5.2.0",
+		"nyc": "^11.4.1",
+		"readable-stream": "~2.0.2",
+		"semver": "~5.0.3",
+		"should": "~3.3.0",
+		"sinon": "^1.17.5",
+		"timekeeper": "~0.0.4"
+	}
+}
